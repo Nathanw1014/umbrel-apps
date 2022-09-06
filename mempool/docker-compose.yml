@@ -7,7 +7,7 @@ services:
       APP_PORT: $APP_MEMPOOL_PORT
       PROXY_AUTH_ADD: "false"
   web:
-    image: mempool/frontend:latest
+    image: mempool/frontend:v2.3.1
     user: "1000:1000"
     init: true
     restart: on-failure
@@ -20,7 +20,7 @@ services:
       default:
         ipv4_address: $APP_MEMPOOL_IP
   api:
-    image: mempool/backend:latest
+    image: mempool/backend:v2.3.1
     user: "1000:1000"
     init: true
     restart: on-failure
